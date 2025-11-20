@@ -288,7 +288,7 @@ end;
 
 procedure TFrmRelVendas.lbCodvendaGetText(Sender: TObject; var Text: string);
 begin
-  text := 'Código da Venda:'+FUCtrlVendas.QueryVenda.FieldByName('CODIGO').AsString;
+  text := FUCtrlVendas.QueryVenda.FieldByName('CODIGO').AsString;
 end;
 
 procedure TFrmRelVendas.lbDescaplicadoGetText(Sender: TObject;
@@ -309,7 +309,7 @@ end;
 
 procedure TFrmRelVendas.lbformapgtoGetText(Sender: TObject; var Text: string);
 begin
-  text := 'Forma de Pagamento: '+ LbFormaPagamento.Caption;
+  text := LbFormaPagamento.Caption;
 end;
 
 procedure TFrmRelVendas.lbvalbrutoGetText(Sender: TObject; var Text: string);

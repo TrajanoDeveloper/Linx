@@ -63,7 +63,7 @@ procedure TFrmCadProduto.Btn_ExcluirClick(Sender: TObject);
 begin
   if FUCtrlProdutos.VerificarSeProdutoVenda(FUCtrlProdutos.QueryProduto.FieldByName('CODIGO').AsInteger) then
   begin
-    MessageDlg('Produto já utilizado em venda!',TMsgDlgType.mtInformation,[mbok],0);
+    MessageDlg('Grupo de produto já utilizado em venda!',TMsgDlgType.mtInformation,[mbok],0);
     exit;
   end;
   if MessageDlg('Você tem certeza que deseja excluir este produto?',mtConfirmation,[mbyes,mbno],0)=mryes then

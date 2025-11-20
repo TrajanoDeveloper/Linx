@@ -80,7 +80,6 @@ type
     procedure ImputarDados;
     procedure ImputarDadospagamento;
     procedure Pagar;
-    procedure LimparPagamento;
   public
     { Public declarations }
   end;
@@ -146,7 +145,6 @@ procedure TFrmlancVendas.BtnSairPagtoClick(Sender: TObject);
 begin
   CardPanel1.Visible := False;
   CardPanel1.SendToBack;
-  LimparPagamento;
 end;
 
 procedure TFrmlancVendas.DBTipoDescontoClick(Sender: TObject);
@@ -166,7 +164,6 @@ begin
   LbValorDescontp.Caption := 'R$ ' + TFuncionalidades.FormatarValorTexto
     (FUCtrlVendas.ValorDesconto);
   FUCtrlVendas.ValorLiquido := VValorFinal;
-  FUCtrlVendas.ValorPercentual := FUCtrlVendas.ValorDesconto;
 end;
 
 procedure TFrmlancVendas.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -272,20 +269,6 @@ end;
 
 procedure TFrmlancVendas.LimparCampos;
 begin
-
-end;
-
-procedure TFrmlancVendas.LimparPagamento;
-begin
-  FUCtrlVendas.CodigoProduto := 0;
-  FUCtrlVendas.Quantidade := 0;
-  FUCtrlVendas.Valor := 0;
-  FUCtrlVendas.CodigoItem := 0;
-  DBTipoDesconto.KeyValue := null;
-  DBTipoPagamento.KeyValue := null;
-  LbValorBruto.Caption := 'R$ 0,00' ;
-  LbValorDescontp.Caption := 'R$ 0,00';
-  LbValorLiquido.Caption := 'R$ 0,00';
 
 end;
 

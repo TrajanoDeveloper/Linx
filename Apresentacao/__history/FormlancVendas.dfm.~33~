@@ -483,4 +483,10 @@ object FrmlancVendas: TFrmlancVendas
       end
     end
   end
+  object ClientDataSet1: TClientDataSet
+    Aggregates = <>
+    Params = <>
+    Left = 609
+    Top = 41
+  end
 end

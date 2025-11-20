@@ -166,7 +166,6 @@ begin
   LbValorDescontp.Caption := 'R$ ' + TFuncionalidades.FormatarValorTexto
     (FUCtrlVendas.ValorDesconto);
   FUCtrlVendas.ValorLiquido := VValorFinal;
-  FUCtrlVendas.ValorPercentual := FUCtrlVendas.ValorDesconto;
 end;
 
 procedure TFrmlancVendas.FormClose(Sender: TObject; var Action: TCloseAction);

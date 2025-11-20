@@ -4,7 +4,7 @@
   BorderIcons = [biSystemMenu, biMinimize]
   Caption = 'P&D FOOD - Sistema de Caixa Simples'
   ClientHeight = 750
-  ClientWidth = 1140
+  ClientWidth = 1116
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
@@ -874,13 +874,12 @@
   object StatusBar1: TStatusBar
     Left = 0
     Top = 731
-    Width = 1140
+    Width = 1116
     Height = 19
     Panels = <
       item
         Width = 50
       end>
-    ExplicitWidth = 1116
   end
   object MainMenu1: TMainMenu
     Left = 848

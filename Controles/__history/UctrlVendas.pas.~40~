@@ -82,39 +82,6 @@ implementation
 
 procedure TUCtrlVendas.CarregarDetalheVenda(PcodigoVenda: integer);
 begin
-  QueryDetalheVenda.Close;
-  QueryDetalheVenda.SQL.Clear;
-  QueryDetalheVenda.sql.Add('SELECT                                                                                                                ');
-  QueryDetalheVenda.sql.Add('  VI.CODIGO_SEQUENCIAL,                                                                                               ');
-  QueryDetalheVenda.sql.Add('  CP.DESCRICAO,                                                                                                       ');
-  QueryDetalheVenda.sql.Add('  CP.VALOR,                                                                                                           ');
-  QueryDetalheVenda.sql.Add('  VI.QTD,                                                                                                             ');
-  QueryDetalheVenda.sql.Add('  CAST(REPLACE(CAST(CP.VALOR AS VARCHAR(20)), ''.'', '','') AS VARCHAR(20)) AS VALOR_FORMATADO,                       ');
-  QueryDetalheVenda.sql.Add('  VI.VALOR_SUBTOTAL,                                                                                                  ');
-  QueryDetalheVenda.sql.Add('  CAST(REPLACE(CAST(VI.VALOR_SUBTOTAL AS VARCHAR(20)), ''.'', '','') AS VARCHAR(20)) AS VALOR_SUBTOTAL_FORMATADO,     ');
-  QueryDetalheVenda.sql.Add('  VO.VALOR_PERCENTUAL,                                                                                                ');
-  QueryDetalheVenda.sql.Add('  CAST(REPLACE(CAST(VO.VALOR_PERCENTUAL AS VARCHAR(20)), ''.'', '','') AS VARCHAR(20)) AS VALOR_PERCENTUAL_FORMATADO, ');
-  QueryDetalheVenda.sql.Add('  VD.VALOR_LIQUIDO,                                                                                                   ');
-  QueryDetalheVenda.sql.Add('  CAST(REPLACE(CAST(VD.VALOR_LIQUIDO AS VARCHAR(20)), ''.'', '','') AS VARCHAR(20)) AS VALOR_LIQUIDO_FORMATADO,       ');
-  QueryDetalheVenda.sql.Add('  CAST(REPLACE(CAST(VD.VALOR_BRUTO AS VARCHAR(20)), ''.'', '','') AS VARCHAR(20)) AS VALOR_BRUTO_FORMATADO,           ');
-  QueryDetalheVenda.sql.Add('  VO.DESCRICAO_DESCONTO,                                                                                              ');
-  QueryDetalheVenda.sql.Add('  VR.DESCRICAO_RECEITA,                                                                                               ');
-  QueryDetalheVenda.sql.Add('  CAST(REPLACE(CAST(VD.VALOR_DESCONTO AS VARCHAR(20)), ''.'', '','') AS VARCHAR(20)) AS VALOR_DESCONTO_FORMATADO      ');
-  QueryDetalheVenda.sql.Add('FROM                                                                                                                  ');
-  QueryDetalheVenda.sql.Add('  VENDA VD                                                                                                            ');
-  QueryDetalheVenda.sql.Add('  JOIN VENDAITEM VI                                                                                                   ');
-  QueryDetalheVenda.sql.Add('   ON VI.CODIGO_VENDA = VD.CODIGO                                                                                     ');
-  QueryDetalheVenda.sql.Add('  JOIN CADPRODUTO CP                                                                                                  ');
-  QueryDetalheVenda.sql.Add('   ON CP.CODIGO = VI.CODIGO_PRODUTO                                                                                   ');
-  QueryDetalheVenda.sql.Add('  JOIN VENDARCEITA VR                                                                                                 ');
-  QueryDetalheVenda.sql.Add('   ON VR.CODIGO_VENDA = VD.CODIGO                                                                                     ');
-  QueryDetalheVenda.sql.Add('  JOIN VENDADESCONTO VO                                                                                               ');
-  QueryDetalheVenda.sql.Add('   ON VO.CODIGO_VENDA = VD.CODIGO                                                                                     ');
-  QueryDetalheVenda.sql.Add('WHERE                                                                                                                 ');
-  QueryDetalheVenda.sql.Add('  VD.CODIGO = '+IntToStr(PcodigoVenda)+'                                                                              ');
-  QueryDetalheVenda.sql.Add('ORDER BY VI.CODIGO_SEQUENCIAL                                                                                         ');
-
-  QueryDetalheVenda.Open;
 
 end;
 
@@ -161,9 +128,9 @@ begin
   QueryVenda.SQL.Add('WHERE                                                                                                                          ');
   QueryVenda.SQL.Add('  VD.DATA BETWEEN '+ QuotedStr(FormatDateTime('yyyy-mm-dd',PdataIni)) +' AND '+ QuotedStr(FormatDateTime('yyyy-mm-dd',PdataFim)));
   if PStatus = 1 then
-  QueryVenda.SQL.Add('  AND VD.CANCELADA = ''N''                                                                                                     ');
+  QueryVenda.SQL.Add('  AND VD.CANCELADA = ''N''                                                                                                         ');
   if PStatus = 2 then
-  QueryVenda.SQL.Add('  AND VD.CANCELADA = ''S''                                                                                                     ');
+  QueryVenda.SQL.Add('  AND VD.CANCELADA = ''S''                                                                                                         ');
   QueryVenda.SQL.Add('ORDER BY VD.DATA DESC                                                                                                          ');
 
   QueryVenda.Open;
@@ -222,7 +189,7 @@ begin
       Add('PERCENTUAL', ftInteger);
     end;
 
-
+    // Criar os campos em memória
     CdsTipoDescontos.CreateDataSet;
 
 
@@ -253,7 +220,7 @@ begin
       Add('DESCRICAO', ftString, 100);
     end;
 
-
+    // Criar os campos em memória
     CdsTipoPagamentos.CreateDataSet;
 
 
@@ -316,7 +283,7 @@ var
 
           ExecutarSQL(VSql);
         end
-        else
+        else // AQUI PARA RECEBER AO COINFIRMAR O PAGTO
           VSql := 'UPDATE VENDA SET '+
                   'VALOR_BRUTO = '+ TFuncionalidades.FormatarTextoValor(FloatToStr(FvalorBruto))+', '+
                   'VALOR_DESCONTO = '+ TFuncionalidades.FormatarTextoValor(FloatToStr(FValorDesconto))+', '+

@@ -1723,12 +1723,11 @@
       mmBottomOffset = 0
       mmHeight = 16933
       mmPrintPosition = 0
-      object ppLabel2: TppLabel
+      object LbURL: TppLabel
         DesignLayer = ppDesignLayer1
-        UserName = 'LbURL1'
-        HyperLink = 'https://www.linx.com.br'
+        UserName = 'LbURL'
         Border.mmPadding = 0
-        Caption = 'https://www.linx.com.br'
+        Caption = 'https://github.com/TrajanoDeveloper/Projetos'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -1738,9 +1737,29 @@
         FormFieldSettings.FormFieldType = fftNone
         Transparent = True
         mmHeight = 3704
-        mmLeft = 76729
-        mmTop = 5292
-        mmWidth = 34925
+        mmLeft = 63236
+        mmTop = 1588
+        mmWidth = 66146
+        BandType = 8
+        LayerName = Foreground
+      end
+      object LbEndereco: TppLabel
+        DesignLayer = ppDesignLayer1
+        UserName = 'LbEndereco'
+        Border.mmPadding = 0
+        Caption = 'www.linkedin.com/in/alexandre-trajano-b3417a39'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+        FormFieldSettings.FormFieldType = fftNone
+        Transparent = True
+        mmHeight = 3704
+        mmLeft = 61383
+        mmTop = 7673
+        mmWidth = 71174
         BandType = 8
         LayerName = Foreground
       end
@@ -1863,7 +1882,7 @@
     object ppHeaderBand2: TppHeaderBand
       Border.mmPadding = 0
       mmBottomOffset = 0
-      mmHeight = 59002
+      mmHeight = 45508
       mmPrintPosition = 0
       object ppLabel1: TppLabel
         DesignLayer = ppDesignLayer2
@@ -1929,7 +1948,7 @@
         Weight = 0.750000000000000000
         mmHeight = 3969
         mmLeft = -265
-        mmTop = 51655
+        mmTop = 38140
         mmWidth = 198173
         BandType = 0
         LayerName = Foreground1
@@ -1941,7 +1960,7 @@
         Weight = 0.750000000000000000
         mmHeight = 5556
         mmLeft = 2
-        mmTop = 57719
+        mmTop = 44204
         mmWidth = 197643
         BandType = 0
         LayerName = Foreground1
@@ -1961,7 +1980,7 @@
         Transparent = True
         mmHeight = 3704
         mmLeft = 1588
-        mmTop = 53221
+        mmTop = 39706
         mmWidth = 27252
         BandType = 0
         LayerName = Foreground1
@@ -1981,7 +2000,7 @@
         Transparent = True
         mmHeight = 3704
         mmLeft = 34925
-        mmTop = 53221
+        mmTop = 39706
         mmWidth = 14288
         BandType = 0
         LayerName = Foreground1
@@ -2001,7 +2020,7 @@
         Transparent = True
         mmHeight = 3704
         mmLeft = 55827
-        mmTop = 53203
+        mmTop = 39688
         mmWidth = 19579
         BandType = 0
         LayerName = Foreground1
@@ -2021,7 +2040,7 @@
         Transparent = True
         mmHeight = 3704
         mmLeft = 88636
-        mmTop = 53203
+        mmTop = 39688
         mmWidth = 16404
         BandType = 0
         LayerName = Foreground1
@@ -2041,7 +2060,7 @@
         Transparent = True
         mmHeight = 3704
         mmLeft = 115359
-        mmTop = 53203
+        mmTop = 39688
         mmWidth = 12700
         BandType = 0
         LayerName = Foreground1
@@ -2778,175 +2797,6 @@
         BandType = 0
         LayerName = Foreground1
       end
-      object lbCodvenda: TppLabel
-        DesignLayer = ppDesignLayer2
-        UserName = 'lbCodvenda'
-        OnGetText = lbCodvendaGetText
-        Border.mmPadding = 0
-        Caption = 'lbCodvenda'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = [fsBold]
-        FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
-        FormFieldSettings.FormFieldType = fftNone
-        Transparent = True
-        mmHeight = 3705
-        mmLeft = 6879
-        mmTop = 28048
-        mmWidth = 20373
-        BandType = 0
-        LayerName = Foreground1
-      end
-      object lbdtVenda: TppLabel
-        DesignLayer = ppDesignLayer2
-        UserName = 'lbdtVenda'
-        OnGetText = lbdtVendaGetText
-        Border.mmPadding = 0
-        Caption = 'lbdtVenda'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = [fsBold]
-        FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
-        FormFieldSettings.FormFieldType = fftNone
-        Transparent = True
-        mmHeight = 3705
-        mmLeft = 37306
-        mmTop = 28048
-        mmWidth = 14817
-        BandType = 0
-        LayerName = Foreground1
-      end
-      object LdStatusVenda: TppLabel
-        DesignLayer = ppDesignLayer2
-        UserName = 'LdStatusVenda'
-        OnGetText = LdStatusVendaGetText
-        Border.mmPadding = 0
-        Caption = 'LdStatusVenda'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 16
-        Font.Style = [fsBold]
-        FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
-        FormFieldSettings.FormFieldType = fftNone
-        TextAlignment = taCentered
-        Transparent = True
-        mmHeight = 6350
-        mmLeft = 83873
-        mmTop = 20108
-        mmWidth = 40746
-        BandType = 0
-        LayerName = Foreground1
-      end
-      object lbformapgto: TppLabel
-        DesignLayer = ppDesignLayer2
-        UserName = 'lbformapgto'
-        OnGetText = lbformapgtoGetText
-        Border.mmPadding = 0
-        Caption = 'lbformapgto'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = [fsBold]
-        FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
-        FormFieldSettings.FormFieldType = fftNone
-        Transparent = True
-        mmHeight = 3704
-        mmLeft = 80467
-        mmTop = 28048
-        mmWidth = 22490
-        BandType = 0
-        LayerName = Foreground1
-      end
-      object lbDescaplicado: TppLabel
-        DesignLayer = ppDesignLayer2
-        UserName = 'lbDescaplicado'
-        OnGetText = lbDescaplicadoGetText
-        Border.mmPadding = 0
-        Caption = 'lbDescaplicado'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = [fsBold]
-        FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
-        FormFieldSettings.FormFieldType = fftNone
-        Transparent = True
-        mmHeight = 3704
-        mmLeft = 121488
-        mmTop = 28311
-        mmWidth = 21696
-        BandType = 0
-        LayerName = Foreground1
-      end
-      object lbDesconto: TppLabel
-        DesignLayer = ppDesignLayer2
-        UserName = 'lbDesconto'
-        OnGetText = lbDescontoGetText
-        Border.mmPadding = 0
-        Caption = 'lbDesconto'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = [fsBold]
-        FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
-        FormFieldSettings.FormFieldType = fftNone
-        Transparent = True
-        mmHeight = 3704
-        mmLeft = 160383
-        mmTop = 28046
-        mmWidth = 16404
-        BandType = 0
-        LayerName = Foreground1
-      end
-      object lbvalbruto: TppLabel
-        DesignLayer = ppDesignLayer2
-        UserName = 'lbvalbruto'
-        OnGetText = lbvalbrutoGetText
-        Border.mmPadding = 0
-        Caption = 'lbvalbruto'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = [fsBold]
-        FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
-        FormFieldSettings.FormFieldType = fftNone
-        Transparent = True
-        mmHeight = 3704
-        mmLeft = 82004
-        mmTop = 40217
-        mmWidth = 14552
-        BandType = 0
-        LayerName = Foreground1
-      end
-      object lbvalliq: TppLabel
-        DesignLayer = ppDesignLayer2
-        UserName = 'lbvalliq'
-        OnGetText = lbvalliqGetText
-        Border.mmPadding = 0
-        Caption = 'lbvalliq'
-        Font.Charset = DEFAULT_CHARSET
-        Font.Color = clBlack
-        Font.Name = 'Arial'
-        Font.Size = 8
-        Font.Style = [fsBold]
-        FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
-        FormFieldSettings.FormFieldType = fftNone
-        Transparent = True
-        mmHeight = 3705
-        mmLeft = 122750
-        mmTop = 40216
-        mmWidth = 10054
-        BandType = 0
-        LayerName = Foreground1
-      end
     end
     object ppDetailBand2: TppDetailBand
       Border.mmPadding = 0
@@ -2989,7 +2839,7 @@
         Transparent = True
         DataPipelineName = 'pipelineDetalhe'
         mmHeight = 3704
-        mmLeft = 3178
+        mmLeft = 1588
         mmTop = 1323
         mmWidth = 5292
         BandType = 4
@@ -3031,7 +2881,7 @@
         Transparent = True
         DataPipelineName = 'pipelineDetalhe'
         mmHeight = 3704
-        mmLeft = 93406
+        mmLeft = 88636
         mmTop = 1323
         mmWidth = 5556
         BandType = 4
@@ -3067,9 +2917,8 @@
       object ppLabel9: TppLabel
         DesignLayer = ppDesignLayer2
         UserName = 'LbURL'
-        HyperLink = 'https://www.linx.com.br'
         Border.mmPadding = 0
-        Caption = 'https://www.linx.com.br'
+        Caption = 'https://github.com/TrajanoDeveloper/Projetos'
         Font.Charset = DEFAULT_CHARSET
         Font.Color = clBlack
         Font.Name = 'Arial'
@@ -3079,9 +2928,29 @@
         FormFieldSettings.FormFieldType = fftNone
         Transparent = True
         mmHeight = 3704
-        mmLeft = 78846
-        mmTop = 7144
-        mmWidth = 34925
+        mmLeft = 63236
+        mmTop = 1588
+        mmWidth = 66146
+        BandType = 8
+        LayerName = Foreground1
+      end
+      object ppLabel10: TppLabel
+        DesignLayer = ppDesignLayer2
+        UserName = 'LbEndereco'
+        Border.mmPadding = 0
+        Caption = 'www.linkedin.com/in/alexandre-trajano-b3417a39'
+        Font.Charset = DEFAULT_CHARSET
+        Font.Color = clBlack
+        Font.Name = 'Arial'
+        Font.Size = 8
+        Font.Style = [fsBold]
+        FormFieldSettings.FormSubmitInfo.SubmitMethod = fstPost
+        FormFieldSettings.FormFieldType = fftNone
+        Transparent = True
+        mmHeight = 3704
+        mmLeft = 61383
+        mmTop = 7673
+        mmWidth = 71174
         BandType = 8
         LayerName = Foreground1
       end

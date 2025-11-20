@@ -166,7 +166,6 @@ begin
   LbValorDescontp.Caption := 'R$ ' + TFuncionalidades.FormatarValorTexto
     (FUCtrlVendas.ValorDesconto);
   FUCtrlVendas.ValorLiquido := VValorFinal;
-  FUCtrlVendas.ValorPercentual := FUCtrlVendas.ValorDesconto;
 end;
 
 procedure TFrmlancVendas.FormClose(Sender: TObject; var Action: TCloseAction);
@@ -281,8 +280,8 @@ begin
   FUCtrlVendas.Quantidade := 0;
   FUCtrlVendas.Valor := 0;
   FUCtrlVendas.CodigoItem := 0;
-  DBTipoDesconto.KeyValue := null;
-  DBTipoPagamento.KeyValue := null;
+  DBTipoDesconto.KeyValue := '';
+  DBTipoPagamento.KeyValue := '';
   LbValorBruto.Caption := 'R$ 0,00' ;
   LbValorDescontp.Caption := 'R$ 0,00';
   LbValorLiquido.Caption := 'R$ 0,00';

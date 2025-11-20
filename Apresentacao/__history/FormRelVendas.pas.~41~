@@ -69,6 +69,8 @@ type
     DtBairro: TppDBText;
     DtCidade: TppDBText;
     ppFooterBand1: TppFooterBand;
+    LbURL: TppLabel;
+    LbEndereco: TppLabel;
     ppDesignLayers1: TppDesignLayers;
     ppDesignLayer1: TppDesignLayer;
     ppParameterList1: TppParameterList;
@@ -93,6 +95,7 @@ type
     ppDBText5: TppDBText;
     ppFooterBand2: TppFooterBand;
     ppLabel9: TppLabel;
+    ppLabel10: TppLabel;
     ppDesignLayers2: TppDesignLayers;
     ppDesignLayer2: TppDesignLayer;
     ppParameterList2: TppParameterList;
@@ -112,7 +115,6 @@ type
     lbDesconto: TppLabel;
     lbvalbruto: TppLabel;
     lbvalliq: TppLabel;
-    ppLabel2: TppLabel;
     procedure FormClose(Sender: TObject; var Action: TCloseAction);
     procedure BtnGFecharClick(Sender: TObject);
     procedure BtnFecharDetalheClick(Sender: TObject);
@@ -256,7 +258,7 @@ begin
   end;
 
 
-  FUCtrlVendas.CarregarDetalheVenda(FUCtrlVendas.QueryVenda.FieldByName('CODIGO').AsInteger);
+  FUCtrlVendas.CarregarDetalheVenda();
 
   LbFormaPagamento.Caption := FUCtrlVendas.QueryDetalheVenda.FieldByName('DESCRICAO_RECEITA').AsString;
   LbValorBruto.Caption := 'Valor Bruto: R$ ' + FUCtrlVendas.QueryDetalheVenda.FieldByName('VALOR_BRUTO_FORMATADO').AsString;
@@ -288,7 +290,7 @@ end;
 
 procedure TFrmRelVendas.lbCodvendaGetText(Sender: TObject; var Text: string);
 begin
-  text := 'Código da Venda:'+FUCtrlVendas.QueryVenda.FieldByName('CODIGO').AsString;
+  text := FUCtrlVendas.QueryVenda.FieldByName('CODIGO').AsString;
 end;
 
 procedure TFrmRelVendas.lbDescaplicadoGetText(Sender: TObject;
@@ -309,7 +311,7 @@ end;
 
 procedure TFrmRelVendas.lbformapgtoGetText(Sender: TObject; var Text: string);
 begin
-  text := 'Forma de Pagamento: '+ LbFormaPagamento.Caption;
+  text := LbFormaPagamento.Caption;
 end;
 
 procedure TFrmRelVendas.lbvalbrutoGetText(Sender: TObject; var Text: string);

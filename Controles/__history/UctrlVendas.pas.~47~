@@ -96,7 +96,6 @@ begin
   QueryDetalheVenda.sql.Add('  CAST(REPLACE(CAST(VO.VALOR_PERCENTUAL AS VARCHAR(20)), ''.'', '','') AS VARCHAR(20)) AS VALOR_PERCENTUAL_FORMATADO, ');
   QueryDetalheVenda.sql.Add('  VD.VALOR_LIQUIDO,                                                                                                   ');
   QueryDetalheVenda.sql.Add('  CAST(REPLACE(CAST(VD.VALOR_LIQUIDO AS VARCHAR(20)), ''.'', '','') AS VARCHAR(20)) AS VALOR_LIQUIDO_FORMATADO,       ');
-  QueryDetalheVenda.sql.Add('  CAST(REPLACE(CAST(VD.VALOR_BRUTO AS VARCHAR(20)), ''.'', '','') AS VARCHAR(20)) AS VALOR_BRUTO_FORMATADO,           ');
   QueryDetalheVenda.sql.Add('  VO.DESCRICAO_DESCONTO,                                                                                              ');
   QueryDetalheVenda.sql.Add('  VR.DESCRICAO_RECEITA,                                                                                               ');
   QueryDetalheVenda.sql.Add('  CAST(REPLACE(CAST(VD.VALOR_DESCONTO AS VARCHAR(20)), ''.'', '','') AS VARCHAR(20)) AS VALOR_DESCONTO_FORMATADO      ');

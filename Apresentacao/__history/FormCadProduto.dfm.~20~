@@ -123,6 +123,7 @@ object FrmCadProduto: TFrmCadProduto
       Font.Style = [fsBold]
       ParentFont = False
       TabOrder = 1
+      ExplicitHeight = 739
       object Label1: TLabel
         Left = 19
         Top = 24
@@ -208,6 +209,11 @@ object FrmCadProduto: TFrmCadProduto
             item
               Expanded = False
               FieldName = 'CODIGO'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -20
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
               Title.Caption = 'C'#243'digo'
               Width = 115
               Visible = True
@@ -215,6 +221,11 @@ object FrmCadProduto: TFrmCadProduto
             item
               Expanded = False
               FieldName = 'DESCRICAO'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -20
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
               Title.Caption = 'Descri'#231#227'o'
               Width = 560
               Visible = True
@@ -222,6 +233,11 @@ object FrmCadProduto: TFrmCadProduto
             item
               Expanded = False
               FieldName = 'DESC_GRUPO'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -20
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
               Title.Caption = 'Grupo'
               Width = 207
               Visible = True
@@ -229,6 +245,11 @@ object FrmCadProduto: TFrmCadProduto
             item
               Expanded = False
               FieldName = 'VALOR_FORMATADO'
+              Font.Charset = DEFAULT_CHARSET
+              Font.Color = clWindowText
+              Font.Height = -20
+              Font.Name = 'Segoe UI'
+              Font.Style = [fsBold]
               Title.Caption = 'Valor'
               Width = 125
               Visible = True
